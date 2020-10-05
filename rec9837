@@ -1,0 +1,45 @@
+Plante_assignment3:
+total 12
+drwxr-xr-x. 2 myid 4096 Jul  3 10:27 CircularLinkedList
+drwxr-xr-x. 2 myid 4096 Jul  3 10:31 DoublyLinkedList
+-rw-r--r--. 1 myid  255 Jul  3 10:27 Readme.txt
+-rw-r--r--. 1 myid    0 Jul  3 10:34 rec9837
+
+Plante_assignment3/CircularLinkedList:
+total 80
+-rw-r--r--. 1 myid  2298 Jul  3 10:13 CircularLinkedList.cpp
+-rw-r--r--. 1 myid  2296 Jul  3 10:09 CircularLinkedList.cpp~
+-rw-r--r--. 1 myid   496 Jul  2 09:38 CircularLinkedList.h
+-rw-r--r--. 1 myid   431 Jul  2 09:30 CircularLinkedList.h~
+-rw-r--r--. 1 myid  6264 Jul  3 10:27 CircularLinkedList.o
+-rw-r--r--. 1 myid     0 Jul  2 09:46 empty.txt
+-rw-r--r--. 1 myid    29 Jul  2 09:45 input.txt
+-rw-r--r--. 1 myid   445 Jul  3 08:37 ItemType.cpp
+-rw-r--r--. 1 myid   476 Jul  3 08:36 ItemType.cpp~
+-rw-r--r--. 1 myid   281 Jun 26 01:12 ItemType.h
+-rw-r--r--. 1 myid  3080 Jul  3 10:27 ItemType.o
+-rwxr-xr-x. 1 myid 15352 Jul  3 10:27 main
+-rw-r--r--. 1 myid  1442 Jul  3 09:08 main.cpp
+-rw-r--r--. 1 myid  1445 Jul  3 08:59 main.cpp~
+-rw-r--r--. 1 myid  7312 Jul  3 10:27 main.o
+-rw-r--r--. 1 myid   323 Jul  3 10:20 Makefile
+
+Plante_assignment3/DoublyLinkedList:
+total 84
+-rw-r--r--. 1 myid  2371 Jul  2 19:00 DoublyLinkedList.cpp
+-rw-r--r--. 1 myid  2538 Jul  2 18:59 DoublyLinkedList.cpp~
+-rw-r--r--. 1 myid   508 Jul  2 18:33 DoublyLinkedList.h
+-rw-r--r--. 1 myid   508 Jul  2 18:32 DoublyLinkedList.h~
+-rw-r--r--. 1 myid  6952 Jul  3 10:31 DoublyLinkedList.o
+-rw-r--r--. 1 myid     0 Jul  2 18:45 empty.txt
+-rw-r--r--. 1 myid    29 Jul  2 18:44 input.txt
+-rw-r--r--. 1 myid   445 Jul  2 18:26 ItemType.cpp
+-rw-r--r--. 1 myid   451 Jul  2 18:23 ItemType.cpp~
+-rw-r--r--. 1 myid   281 Jun 26 01:14 ItemType.h
+-rw-r--r--. 1 myid  3080 Jul  3 10:31 ItemType.o
+-rwxr-xr-x. 1 myid 19488 Jul  3 10:31 main
+-rw-r--r--. 1 myid  1514 Jul  3 08:26 main.cpp
+-rw-r--r--. 1 myid  1515 Jul  2 19:01 main.cpp~
+-rw-r--r--. 1 myid  7432 Jul  3 10:31 main.o
+-rw-r--r--. 1 myid   311 Jul  3 10:31 Makefile
+/home/myid/arp75723/Plante_assignment3:/home/myid/csci-2720

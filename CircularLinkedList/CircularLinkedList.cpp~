@@ -1,0 +1,133 @@
+#include "ItemType.h"
+#include "CircularLinkedList.h"
+#include <iostream>
+
+
+CircularLinkedList::CircularLinkedList()
+{
+  head = NULL;
+  length = 0;
+}
+
+CircularLinkedList::~CircularLinkedList()
+{
+  NodeType * temp = head;
+  NodeType *tmp = head;
+  while(temp->next != tmp)
+    {
+      temp = head->next;
+      head = head->next->next;
+      delete temp;
+    }
+  delete tmp;
+}
+
+void CircularLinkedList::findItem(ItemType &item, NodeType* &location, NodeType* &predloc, bool & found)
+{
+
+  found = false;
+  location = head->next;
+  predloc = head;
+  do {
+      if (item.compareTo(location->data) == LESS)
+	break;
+      else if(item.compareTo(location->data) == EQUAL)
+	{
+	  found = true;
+	  break;
+	}
+      else
+	{
+	  predloc = location;
+	  location = location ->next;
+	} // else
+  }while(location != head->next);
+} // findItem
+
+
+
+
+void CircularLinkedList::insertItem(ItemType &item)
+{
+  NodeType* newNode;
+  NodeType* predloc;
+  NodeType* location;
+  bool found;
+
+  newNode = new NodeType;
+  newNode->data =item;
+  if(head == NULL)
+    {
+      head = newNode;
+      newNode->next = newNode;
+    }
+  else
+    {
+      findItem(item, location, predloc, found);
+      if(found == true)
+	{
+	  std::cout << "Item already exists" << std::endl;
+	  return;
+	}
+      else if(item.compareTo(head->data) == GREATER)
+	{
+	predloc->next= newNode;
+	newNode->next = location;
+	head = newNode;
+	}
+      else
+	{
+	newNode ->next = predloc->next;
+	predloc->next = newNode;
+	}
+    }
+  length++;
+}
+
+
+void CircularLinkedList::deleteItem(ItemType &item)
+{
+  NodeType* location;
+  NodeType* predloc;
+  bool found;
+  findItem(item, location, predloc, found);
+  if(!found)
+    {
+      std::cout<< "Item not in list!" << std::endl;
+    }
+  else
+    {
+      if(location == predloc)
+	head = NULL;
+      else if(location == head)
+	{
+	  predloc->next = location->next;
+	  head = predloc;
+	}
+      else
+	predloc->next = location->next;
+      delete location;
+      length --;
+    }
+}
+
+int CircularLinkedList::lengthIs() const
+{
+  return length;
+}
+
+void CircularLinkedList::print()
+{
+  if(head == NULL)
+    std::cout << "\n";
+  else
+    {
+      NodeType* location = head->next;
+      for(int i = 0; i < length; i++)
+	{
+	  std::cout <<location->data.getValue() << " ";
+	  location = location->next;
+	}
+      std::cout <<"\n" ;
+    }
+}
